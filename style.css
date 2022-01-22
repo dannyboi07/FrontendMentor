@@ -9,9 +9,7 @@
 body {
     margin: 0;
     box-sizing: border-box;
-    /* border: 0; */
     background-color: var(--main-bg-dark-blue);
-    /* background-color: white; */
     color: white;
     font-family: 'Outfit', sans-serif;
     font-size: 1.125rem;
@@ -22,12 +20,12 @@ body {
     max-width: 21.5%;
     min-width: 350px;
     border-radius: 1em;
-    /* height: 20%; */
     padding: 1.5em;
-    /* border: 1px solid white; */
     color: var(--soft-blue);
     background-color: var(--card-bg-dark-blue);
 }
+
+/* Setting header and header link styles on a global level */
 
 h2 a, h3 a {
     text-decoration: none;
@@ -38,12 +36,12 @@ h2 a:hover, h3 a:hover {
     color: var(--cyan)
 }
 
-
+/* NFT Item Image */
 .view-image {
     position: absolute;
     top: 42%;
     left: 43.5%;
-    visibility: hidden;
+    opacity: 0;
 }
 
 .nft-img-container {
@@ -62,29 +60,20 @@ h2 a:hover, h3 a:hover {
     display: block;
 }
 
-/* .nft-img-container:hover {
-    background-color: var(--cyan);
-    border-radius: 1em;
-} */
-
 .nft-img-container:hover .view-image {
-    visibility: visible;
+    opacity: 1;
+    transition: 2s;
 }
 
-/* .nft-img-container .item-image:hover {
-    opacity: 0.5;
-}; */
-
-/* .nft-img-container::after {
-    margin: 0;
-    border: 0;  
-} */
+/* NFT Description */
 
 .item-description p {
     color: var(--soft-blue);
     font-size: 1.125rem;
     font-weight: 200;
 }
+
+/* Item Details, value and timer */
 
 .value-and-timer {
     display: flex;
@@ -113,14 +102,17 @@ h2 a:hover, h3 a:hover {
     white-space: nowrap;
 }
 
+/* Section divider style*/
+
 hr {
     border: 1px solid var(--line-color);
 }
 
+/* Creator details */
+
 .creator {
     display: flex;
     justify-content: start;
-    /* margin-top: 1.5em; */
 }
 
 .creator img {
